@@ -1,5 +1,6 @@
 local Color, c, Group, g, s = require("colorbuddy").setup()
 local v = vim
+local no = s.NONE
 
 v.g.colors_name = "sitrusbuddy"
 
@@ -69,6 +70,16 @@ Group.new("DiffDelete", c.red, c.backgnd_alt, s.none)
 Group.new("DiffLine", c.black, c.backgnd_alt, s.underline)
 Group.new("DiffRemoved", c.red, c.backgnd_alt, s.none)
 Group.new("DiffText", c.brown, c.backgnd_alt, s.none)
+
+Group.new("GitSignsAdd", c.limegreen, c.none, no)
+Group.new("GitSignsAddNr", c.bg, c.green, no)
+Group.new("GitSignsAddLn", c.red, c.none, no)
+Group.new("GitSignsChange", c.orange, c.none, no)
+Group.new("GitSignsChangeNr", c.bg, c.orange, no)
+Group.new("GitSignsChangeLn", c.orange, c.none, no)
+Group.new("GitSignsDelete", c.red, c.none, no)
+Group.new("GitSignsDeleteNr", c.fg1, c.red, no)
+Group.new("GitSignsDeleteLn", c.red, c.none, no)
 
 Group.new("SpellBad", c.red, c.none, s.undercurl)
 Group.new("SpellCap", c.orange, c.none, s.undercurl)
