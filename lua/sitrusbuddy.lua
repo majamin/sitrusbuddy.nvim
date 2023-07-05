@@ -11,7 +11,7 @@ local palette = {
 	darkgray = { gui = "#34373a", cterm = 095 },
 	dark = { gui = "#1c1c1c", cterm = 243 },
 	black = { gui = "#131515", cterm = 234 },
-	backgnd = { gui = "#181a1b", cterm = 233 },
+	backgnd = { gui = "#1f2123", cterm = 233 },
 	backgnd_alt = { gui = "#2f3132", cterm = 233 },
 
 	darkgreen = { gui = "#37ad82", cterm = 065 }, -- darkgreen
@@ -63,23 +63,13 @@ Group.new("SitrusGreen", c.green, c.none, s.none)
 Group.new("SitrusBlueReverse", c.blue, c.none, s.reverse)
 Group.new("SitrusOrangeReverse", c.orange, c.none, s.reverse)
 
-Group.new("DiffAdd", c.darkgreen, c.backgnd_alt, s.none)
-Group.new("DiffAdded", c.darkgreen, c.backgnd_alt, s.none)
-Group.new("DiffChange", c.blue, c.backgnd_alt, s.none)
-Group.new("DiffDelete", c.red, c.backgnd_alt, s.none)
+Group.new("DiffAdd", c.limegreen, c.none, s.none)
+Group.new("DiffAdded", c.limegreen, c.none, s.none)
+Group.new("DiffChange", c.blue, c.none, s.none)
+Group.new("DiffDelete", c.red, c.none, s.none)
 Group.new("DiffLine", c.black, c.backgnd_alt, s.underline)
 Group.new("DiffRemoved", c.red, c.backgnd_alt, s.none)
 Group.new("DiffText", c.brown, c.backgnd_alt, s.none)
-
-Group.new("GitSignsAdd", c.limegreen, c.none, no)
-Group.new("GitSignsAddNr", c.bg, c.green, no)
-Group.new("GitSignsAddLn", c.red, c.none, no)
-Group.new("GitSignsChange", c.orange, c.none, no)
-Group.new("GitSignsChangeNr", c.bg, c.orange, no)
-Group.new("GitSignsChangeLn", c.orange, c.none, no)
-Group.new("GitSignsDelete", c.red, c.none, no)
-Group.new("GitSignsDeleteNr", c.fg1, c.red, no)
-Group.new("GitSignsDeleteLn", c.red, c.none, no)
 
 Group.new("SpellBad", c.red, c.none, s.undercurl)
 Group.new("SpellCap", c.orange, c.none, s.undercurl)
@@ -147,7 +137,7 @@ Group.link("CursorLineNr", g.SitrusYellow)
 Group.link("EndOfBuffer", g.NonText)
 Group.link("FoldColumn", g.LineNr)
 Group.link("Folded", g.NonText)
-Group.link("SignColumn", g.CursorLine)
+Group.link("SignColumn", g.SitrusGray)
 Group.link("VertSplit", g.LineNr)
 Group.link("Whitespace", g.NonText)
 
