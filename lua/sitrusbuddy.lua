@@ -5,7 +5,7 @@ v.g.colors_name = "sitrusbuddy"
 
 local palette = {
 	white = { gui = "#eaeaea", cterm = 250 },
-	lighgray = { gui = "#919191", cterm = 246 },
+	lightgray = { gui = "#919191", cterm = 246 },
 	gray = { gui = "#4c5356", cterm = 238 },
 	darkgray = { gui = "#34373a", cterm = 095 },
 	dark = { gui = "#1c1c1c", cterm = 243 },
@@ -34,12 +34,13 @@ end
 Group.new("None", c.none, c.none, s.none)
 Group.new("Header", c.white, c.none, s.none)
 Group.new("Normal", c.white, c.backgnd, s.none)
-Group.new("Noise", c.lighgray, c.none, s.none)
+Group.new("Noise", c.lightgray, c.none, s.none)
 Group.new("Comment", c.gray, c.none, s.none)
 Group.new("NonText", c.dark, c.none, s.none)
 
 Group.new("Error", c.red, c.none, s.none)
 Group.new("Number", c.purple, c.none, s.none)
+Group.new("Float", c.purple, c.none, s.none)
 Group.new("Special", c.yellow, c.none, s.none)
 Group.new("String", c.darkgreen, c.none, s.none)
 Group.new("Title", c.blue, c.none, s.none)
@@ -87,6 +88,8 @@ Group.new("Visual", c.none, c.darkgray, s.none)
 Group.new("VisualNOS", c.none, c.darkgray, s.none)
 Group.new("WildMenu", c.pink, c.darkgray, s.none)
 
+Group.new("TSDefine", c.darkgreen, c.none, s.none)
+
 -- LINKS
 
 Group.link("Constant", g.Normal)
@@ -95,6 +98,7 @@ Group.link("Function", g.Normal)
 Group.link("Identifier", g.Normal)
 Group.link("Statement", g.Normal)
 Group.link("Type", g.Noise)
+Group.link("Structure", g.Noise)
 Group.link("TypeDef", g.Noise)
 
 Group.link("Conditional", g.SitrusYellow)
@@ -202,7 +206,7 @@ Group.link("netrwComment", g.SitrusGray)
 Group.link("@comment", g.Comment)
 Group.link("@none", g.None)
 Group.link("@preproc", g.PreProc)
-Group.link("@define", g.Define)
+Group.link("@define", g.TSDefine)
 Group.link("@operator", g.Operator)
 
 Group.link("@punctuation.delimiter", g.Delimiter)
@@ -255,10 +259,9 @@ Group.link("@property", g.Identifier)
 
 Group.link("@variable", g.Normal)
 Group.link("@variable.builtin", g.Normal)
-
 Group.link("@constant", g.Constant)
 Group.link("@constant.builtin", g.Normal)
-Group.link("@constant.macro", g.Define)
+Group.link("@constant.macro", g.TSDefine)
 
 Group.link("@namespace", g.Normal)
 Group.link("@symbol", g.Boolean)
@@ -282,7 +285,6 @@ Group.link("@text.diff.delete", g.DiffRemoved)
 Group.link("@tag", g.Tag)
 Group.link("@tag.attribute", g.Identifier)
 Group.link("@tag.delimiter", g.Delimiter)
-
 Group.link("@punctuation", g.Delimiter)
 Group.link("@macro", g.Macro)
 Group.link("@structure", g.Structure)
