@@ -16,7 +16,7 @@ local palette = {
 
 	darkgreen = { gui = "#37ad82", cterm = 065 }, -- darkgreen
 	limegreen = { gui = "#a3db81", cterm = 108 }, -- limegreen
-	pink = { gui = "#ca70d6", cterm = 175 }, -- coralpink
+	pink = { gui = "#ca70d6", cterm = 175 },     -- coralpink
 	purple = { gui = "#a29bfe", cterm = 103 },
 	red = { gui = "#d75f5f", cterm = 167 },
 	orange = { gui = "#fe8019", cterm = 173 },
@@ -82,7 +82,7 @@ Group.new("Search", c.yellow, c.none, s.reverse)
 Group.new("MatchParen", c.yellow, c.none, s.none)
 Group.new("Pmenu", c.none, c.backgnd_alt, s.none)
 Group.new("PmenuSel", c.yellow, c.dark, s.none)
-Group.new("StatusLine", c.none, c.black, s.none)
+Group.new("StatusLine", c.none, c.backgnd, s.none)
 Group.new("StatusLineNC", c.black, c.black, s.none)
 Group.new("URI", c.darkgreen, c.none, s.underline)
 Group.new("Visual", c.none, c.darkgray, s.none)
@@ -133,6 +133,7 @@ Group.link("HealthSuccess", g.String)
 Group.link("CursorLine", g.StatusLine)
 Group.link("ColorColumn", g.CursorLine)
 Group.link("LineNr", g.SitrusGray)
+Group.link("FidgetTask", g.Normal)
 Group.link("CursorLineNr", g.SitrusYellow)
 Group.link("EndOfBuffer", g.NonText)
 Group.link("FoldColumn", g.LineNr)
