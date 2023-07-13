@@ -96,7 +96,7 @@ Group.new("TSDefine", c.darkgreen, c.none, s.none)
 Group.link("Constant", g.Normal)
 Group.link("Delimiter", g.Normal)
 Group.link("Function", g.Normal)
-Group.link("Identifier", g.Normal)
+Group.link("Identifier", g.Function)
 Group.link("Statement", g.Normal)
 Group.link("Type", g.Noise)
 Group.link("Structure", g.Noise)
@@ -169,9 +169,20 @@ Group.link("GitSignsAdd", g.DiffAdd)
 Group.link("GitSignsChange", g.DiffChange)
 Group.link("GitSignsDelete", g.DiffDelete)
 
--- Telescope
+-- LANGUAGE SPECIFIC
 
-Group.link("TelescopeBorder", g.Normal)
+Group.link("helpHeader", g.Header)
+Group.link("helpHeadline", g.Title)
+Group.link("helpHyperTextEntry", g.Number)
+Group.link("helpIgnore", g.NonText)
+Group.link("helpOption", g.String)
+Group.link("helpSectionDelim", g.Noise)
+
+----------------------------------------
+-- Telescope and Cmp
+----------------------------------------
+
+Group.link("TelescopeBorder", g.Noise)
 Group.link("TelescopeMatching", g.SitrusBlue)
 Group.link("TelescopeSelection", g.SitrusOrange)
 
@@ -184,18 +195,11 @@ Group.link("CmpItemKind", g.SitrusBlue)
 Group.link("CmpItemKindText", g.SitrusOrange)
 Group.link("CmpItemMenu", g.SitrusPurple)
 
--- LANGUAGE SPECIFIC
-
-Group.link("helpHeader", g.Header)
-Group.link("helpHeadline", g.Title)
-Group.link("helpHyperTextEntry", g.Number)
-Group.link("helpIgnore", g.NonText)
-Group.link("helpOption", g.String)
-Group.link("helpSectionDelim", g.Noise)
 
 ----------------------------------------
 -- Netrw
 ----------------------------------------
+
 Group.link("netrwLink", g.SitrusGray)
 Group.link("netrwSymLink", g.SitrusBlue)
 Group.link("netrwExe", g.SitrusYellow)
@@ -332,3 +336,15 @@ Group.link("ElError", g.SitrusRed)
 Group.link("ElWarning", g.SitrusOrange)
 Group.link("ElInformation", g.SitrusGray)
 Group.link("ElHint", g.SitrusBlue)
+
+----------------------------------------------
+-- WhichKey
+----------------------------------------------
+
+Group.new("WhichKey", c.yellow, c.backgnd_alt, s.none)
+Group.new("WhichKeyGroup", c.white, c.backgnd_alt, s.none)
+-- Group.new("WhichKeySeparator", c.lightgray, c.backgnd_alt, s.none)
+Group.new("WhichKeyDesc", c.lightgray, c.backgnd_alt, s.none)
+Group.new("WhichKeyFloat", c.lightgray, c.backgnd_alt, s.none)
+-- Group.new("WhichKeyBorder", c.lightgray, c.backgnd_alt, s.none)
+-- Group.new("WhichKeyValue", c.lightgray, c.backgnd_alt, s.none)
